@@ -1,21 +1,13 @@
 ﻿#include "pch.h"
-#include <Windows.h>
-#include <conio.h>
-#include <ctime>
-#include <iomanip>
-#include <iostream>
+
 using namespace std;
 
 int main()
 {
-    std::cout << "Keyboard ninja v 1.0 beta\n" ;
-    COORD position, position1;
-    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-    position.X = 60;
-    position.Y = 15;
-    position1.X = 0;
-    position1.Y = 0;
+	
+	Hello a;
 
+	/*
     int c, result = 0;
     unsigned int search_time = 0;
     
@@ -33,5 +25,5 @@ int main()
         if (c == (int)i)
             result++;
     }
-
+	*/
 }
