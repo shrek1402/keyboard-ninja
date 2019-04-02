@@ -6,6 +6,9 @@ Hello::Hello()
     Hello::SetWelcomeY();
     Hello::SetStringVec();
     Hello::PrintHello();
+    _getch();
+    system("cls");
+
 }
 
 void Hello::SetWelcomeX()
@@ -24,7 +27,6 @@ void Hello::SetWelcomeX()
     }
     welcome.close();
 }
-
 void Hello::SetWelcomeY()
 {
     int firstLine;
@@ -33,7 +35,6 @@ void Hello::SetWelcomeY()
         position.at(i).Y = firstLine + i;
     }
 }
-
 void Hello::SetStringVec()
 {
     std::ifstream welcome("welcome.txt", std::ios_base::in);
@@ -44,10 +45,9 @@ void Hello::SetStringVec()
 
     for (size_t i = 0; std::getline(welcome, sTemp); i++) {
         vStr.push_back(sTemp);
-	}
+    }
     welcome.close();
 }
-
 void Hello::PrintHello()
 {
     for (size_t i = 0; i < position.size() - 1; i++) {
@@ -58,4 +58,6 @@ void Hello::PrintHello()
 
 Hello::~Hello()
 {
+    position.clear();
+    vStr.clear();
 }

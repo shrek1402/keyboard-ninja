@@ -8,9 +8,11 @@ private:
 
 public:
     Hello();
+
     void SetWelcomeX();
     void SetWelcomeY();
     void SetStringVec();
     void PrintHello();
-    ~Hello();
+    
+	~Hello();
 };
