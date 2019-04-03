@@ -18,10 +18,9 @@ void Hello::SetWelcomeX()
         std::cout << "File not open :( \n";
 
     std::string sTemp;
-
     while (std::getline(welcome, sTemp)) {
         COORD cTemp;
-        cTemp.X = objLITC.GetPosition(sTemp);
+       // cTemp.X = objLITC.GetPosition(sTemp, 0);
         cTemp.Y = sqrt(-1);
         position.push_back(cTemp);
     }

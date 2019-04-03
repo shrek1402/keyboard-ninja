@@ -1,26 +1,42 @@
 #include "pch.h"
-#include "Menu.h"
 
 
 Menu::Menu()
 {
+    ShowMenu(_nMenu);
+
+    _nMenu = _getch();
 }
 
-void Menu::GetPunctsMenu()
+
+
+void Menu::GetPunctsMenu(int _nMenu)
 {
-    std::ifstream fPunctsMenu("PunctsMenu.txt", std::ios_base::in);
-    if (!fPunctsMenu.is_open())
-        std::cout << "File not open :( \n";
+    _objOpenFile.Open("PunctsMenu.txt");
+
+	switch (_nMenu) {
+    //case 1:
+		
+    default:
+        break;
+    }
+}
+
+void Menu::SetMenu(int _nMenu)
+{
 
 }
 
-void Menu::SetMenu()
+void Menu::ShowMenu(int nMenu)
 {
+    switch (nMenu) {
+    case 0:
+        _objOpenFile.Open("MainMenu.txt");
 
-}
-
-void Menu::ShowMenu()
-{
+    default:
+        return;
+    }
+    //_objOpenFile.Open("");
 }
 
 Menu::~Menu()

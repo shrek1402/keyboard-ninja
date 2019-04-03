@@ -4,7 +4,9 @@ using namespace std;
 
 int main()
 {
-	Hello a;
-
-
+    FileOpen mainMenu;
+    mainMenu.Open("MainMenu.txt");
+    mainMenu.SetPositionX();
+    mainMenu.SetPositionY(0);
+    mainMenu.PrintMenu();
 }

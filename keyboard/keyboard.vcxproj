@@ -151,12 +151,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="FileOpen.h" />
     <ClInclude Include="Hello.h" />
     <ClInclude Include="LITC.h" />
     <ClInclude Include="Menu.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="FileOpen.cpp" />
     <ClCompile Include="Hello.cpp" />
     <ClCompile Include="keyboard.cpp" />
     <ClCompile Include="LITC.cpp" />

@@ -1,12 +1,15 @@
 #pragma once
 class Menu {
 private:
-public:
-    Menu();
+    int _nMenu = 0;
+    FileOpen _objOpenFile;
 
-	void GetPunctsMenu();
-    void SetMenu();
-    void ShowMenu();
+public:
+	Menu();
+
+    void GetPunctsMenu(int);
+    void SetMenu(int);
+    void ShowMenu(int);
 
     ~Menu();
 };
