@@ -41,7 +41,7 @@ install:
 build_script:
     # скрипт сборки проекта:
     make -f make
-    - mkdir build
+    #- mkdir build
     #- cd build
     #- cmake .. %CMAKE_CONFIGURE_FLAGS%
     #- cmake --build . %CMAKE_BUILD_FLAGS%
