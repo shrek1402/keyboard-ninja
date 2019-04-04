@@ -31,22 +31,24 @@ environment:
 
 install:
     # скрипт настройки среды и установки зависимостей:
-    - call ci\appveyor\set-env.bat %TOOLCHAIN% %PLATFORM%
+    #- call ci\appveyor\set-env.bat %TOOLCHAIN% %PLATFORM%
 
-    - appveyor DownloadFile <url> -FileName <local-file>
-    - 7z e -y <local-file> -o<local-dir>
-    - ...
+    #- appveyor DownloadFile <url> -FileName <local-file>
+    #- 7z e -y <local-file> -o<local-dir>
+    #- ...
+     - ps: choco install make
 
 build_script:
     # скрипт сборки проекта:
+    make -f make
     - mkdir build
-    - cd build
-    - cmake .. %CMAKE_CONFIGURE_FLAGS%
-    - cmake --build . %CMAKE_BUILD_FLAGS%
+    #- cd build
+    #- cmake .. %CMAKE_CONFIGURE_FLAGS%
+    #- cmake --build . %CMAKE_BUILD_FLAGS%
 
 test_script:
     # скрипт тестирования проекта:
-    - ctest -C %CONFIGURATION% --output-on-failure
+    #- ctest -C %CONFIGURATION% --output-on-failure
 
 artifacts:
     - path: <local-package-path>
