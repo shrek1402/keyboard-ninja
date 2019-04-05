@@ -1,5 +1,5 @@
 CC=g++
-CFLAGS=-c
+CFLAGS=-c -Os -std=c++14
 LDFLAGS=
 SOURCES=keyboard/pch.cpp keyboard/FileOpen.cpp keyboard/LITC.cpp keyboard/pch.cpp keyboard/keyboard.cpp
 OBJECTS=$(SOURCES:.cpp=.o)
