@@ -6,8 +6,9 @@
 #include <ctime>
 #include <fstream>
 #include <iomanip>
-#include <iostream>
+
 #include <string>
+#include <iostream>
 #include <vector>
 
 #include "Structusr.h" //TODO
