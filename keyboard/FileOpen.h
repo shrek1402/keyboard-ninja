@@ -1,5 +1,19 @@
 #pragma once
-#include "pch.h"
+#include <algorithm>
+#include <cstdio>
+#include <ctime>
+#include <fstream>
+#include <iomanip>
+
+#include <iostream>
+#include <string>
+#include <vector>
+
+#include "FileOpen.h"
+#include "LITC.h"
+#include "Structusr.h" //TODO
+//#include "Hello.h"
+#include "Menu.h"
 class FileOpen {
 private:
     std::string _nameFile;
