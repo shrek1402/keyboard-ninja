@@ -35,8 +35,7 @@ install:
 
     - appveyor DownloadFile <url> -FileName <local-file>
     - 7z e -y <local-file> -o<local-dir>
-    #- ...
-     - ps: choco install make
+    - ps: choco install make
 
 build_script:
     # скрипт сборки проекта:
