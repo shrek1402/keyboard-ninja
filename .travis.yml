@@ -1,7 +1,6 @@
 language: cpp
 compiler: gcc
 dist: trusty
-#cache: cargo
 
 before_install:
   # C++17
@@ -13,7 +12,8 @@ install:
   - sudo apt-get install -qq g++-6
   - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-6 90
 
-script: 
+script:
+  -ls
   - g++ keyboard/pch.cpp keyboard/FileOpen.cpp keyboard/LITC.cpp keyboard/pch.cpp keyboard/keyboard.cpp -std=c++17 -o travis_gcc_cpp17
   -ls
   -cd keyboard
