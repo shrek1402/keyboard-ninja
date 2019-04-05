@@ -10,6 +10,7 @@ int main()
     mainMenu.SetPositionY(0);
     mainMenu.PrintMenu();
     mainMenu.~FileOpen();
+
     int userSelection = 0; // = _getch();
 
     while (userSelection) {
