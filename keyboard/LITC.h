@@ -1,6 +1,7 @@
 #pragma once
 
 class LITC {
+
 public:
     LITC();
 
@@ -8,7 +9,9 @@ public:
     //0 - centr
     //1 - left
     //2 - rright
-	int GetPosition(int, int);
+    int GetPosition(int, int);
+
+    void SetConsoleCursorPosition(COORD);
 
     ~LITC();
 };

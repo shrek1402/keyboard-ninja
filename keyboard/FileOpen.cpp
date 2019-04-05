@@ -12,7 +12,7 @@ void FileOpen::Open(std::string nameFile)
     if (!_fPunctsMenu.is_open())
         std::cout << "File " << _nameFile << " not open :( \n";
 
-    std::string sTemp;
+    std::string sTemp; 
     for (size_t i = 0; std::getline(_fPunctsMenu, sTemp); i++) {
         _vPuncts.push_back(sTemp);
     }
@@ -20,7 +20,6 @@ void FileOpen::Open(std::string nameFile)
 void FileOpen::SetPositionX()
 {
     std::string sTemp;
-
 	auto lenghtTemp = std::max_element(_vPuncts.begin(), _vPuncts.end(), [](std::string s1, std::string s2){
         return s1.length() > s2.length();
 	}); //TODO auto -> std::vector<string>::iterator
@@ -54,7 +53,7 @@ void FileOpen::PrintMenu()
     _fPunctsMenu.seekg(0, std::ios::beg);
 
     for (size_t i = 0; i < _vPuncts.size(); i++) {
-        SetConsoleCursorPosition(hConsole, _vPositions[i]);
+        _objLITC.SetConsoleCursorPosition(_vPositions[i]);
         std::cout << _vPuncts[i];
     }
 }
