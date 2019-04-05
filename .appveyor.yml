@@ -31,10 +31,10 @@ environment:
 
 install:
     # скрипт настройки среды и установки зависимостей:
-    #- call ci\appveyor\set-env.bat %TOOLCHAIN% %PLATFORM%
+    - call ci\appveyor\set-env.bat %TOOLCHAIN% %PLATFORM%
 
-    #- appveyor DownloadFile <url> -FileName <local-file>
-    #- 7z e -y <local-file> -o<local-dir>
+    - appveyor DownloadFile <url> -FileName <local-file>
+    - 7z e -y <local-file> -o<local-dir>
     #- ...
      - ps: choco install make
 
@@ -42,10 +42,10 @@ build_script:
     # скрипт сборки проекта:
     ##make -f make
     - g++ keyboard/pch.cpp keyboard/FileOpen.cpp keyboard/LITC.cpp keyboard/pch.cpp keyboard/keyboard.cpp -std=c++17 -o travis_gcc_cpp17
-    #- mkdir build
-    #- cd build
-    #- cmake .. %CMAKE_CONFIGURE_FLAGS%
-    #- cmake --build . %CMAKE_BUILD_FLAGS%
+    - mkdir build
+    - cd build
+    - cmake .. %CMAKE_CONFIGURE_FLAGS%
+    - cmake --build . %CMAKE_BUILD_FLAGS%
 
 test_script:
     # скрипт тестирования проекта:
@@ -61,7 +61,7 @@ deploy:
     provider: GitHub
 
     auth_token:
-        secure: <encrypted-github-token>
+        secure: DcGDs5s4qTsa0OHim0+BujLjXPdGJu2GAKALIDxAim+cJpUlWyNl+JxuNPnusafZ
 
     artifact: package_name
     force_update: true
