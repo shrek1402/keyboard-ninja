@@ -2,6 +2,7 @@
 language: cpp
 compiler: gcc
 dist: trusty
+cache: cargo
 
 before_install:
   # C++17
