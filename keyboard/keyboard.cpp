@@ -5,7 +5,7 @@ using namespace std;
 int main()
 {
     FileOpen mainMenu;
-    mainMenu.Open("MainMenu.txt");
+    mainMenu.Open("keyboard/MainMenu.txt");
     mainMenu.SetPositionX();
     mainMenu.SetPositionY(0);
     mainMenu.PrintMenu();
