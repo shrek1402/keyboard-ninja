@@ -21,9 +21,6 @@
     <ClInclude Include="LITC.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Menu.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="FileOpen.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
@@ -39,9 +36,6 @@
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="LITC.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="Menu.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="FileOpen.cpp">

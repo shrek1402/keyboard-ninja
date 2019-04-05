@@ -1,4 +1,3 @@
-#include "LITC.h"
 #include "pch.h"
 
 LITC::LITC()

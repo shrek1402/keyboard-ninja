@@ -1,5 +1,18 @@
 #pragma once
+#include <algorithm>
+#include <cstdio>
+#include <ctime>
+#include <fstream>
+#include <iomanip>
 
+#include <iostream>
+#include <string>
+#include <vector>
+
+#include "FileOpen.h"
+#include "LITC.h"
+#include "Structusr.h" //TODO
+//#include "Hello.h"
 class LITC {
 
 public:
