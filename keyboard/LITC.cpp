@@ -18,7 +18,7 @@ int LITC::GetPosition(int str, int position)
 
 void LITC::SetConsoleCursorPosition(COORD coord) //unsigned
 {
-    std::cout << "\033["+std::to_string(coord.X)+";"+std::to_string(coord.Y)+"H";
+    std::cout << "\033["+std::to_string(coord.X)+";"+std::to_string(coord.Y)+"f";
     std::cout << "\033[5;5H";
 }
 

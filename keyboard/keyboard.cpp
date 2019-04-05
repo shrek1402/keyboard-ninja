@@ -9,10 +9,10 @@ int main()
     mainMenu.SetPositionX();
     mainMenu.SetPositionY(0);
     mainMenu.PrintMenu();
-	mainMenu.~FileOpen();
-    int userSelection = _getch();
+    mainMenu.~FileOpen();
+    int userSelection = 0; // = _getch();
 
-	while (userSelection) {
+    while (userSelection) {
         FileOpen menu;
     }
 }

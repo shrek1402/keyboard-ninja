@@ -2,7 +2,7 @@
 #define PCH_H
 
 #include <algorithm>
-#include <conio.h>
+#include <cstdio>
 #include <ctime>
 #include <fstream>
 #include <iomanip>

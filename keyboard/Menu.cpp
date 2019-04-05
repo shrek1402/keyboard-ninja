@@ -5,7 +5,7 @@ Menu::Menu()
 {
     ShowMenu(_nMenu);
 
-    _nMenu = _getch();
+   // _nMenu = _getch();
 }
 
 
