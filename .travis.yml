@@ -1,4 +1,5 @@
 language: cpp
+cache: cargo
 compiler: gcc
 dist: trusty
 
@@ -13,9 +14,9 @@ install:
   - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-6 90
 
 script:
-  -ls
+  - ls
   - g++ keyboard/pch.cpp keyboard/FileOpen.cpp keyboard/LITC.cpp keyboard/pch.cpp keyboard/keyboard.cpp -std=c++17 -o travis_gcc_cpp17
-  -ls
-  -cd keyboard
-  -ls
+  - ls
+  - cd keyboard
+  - ls
   - ./travis_gcc_cpp17
