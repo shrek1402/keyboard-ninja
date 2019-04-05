@@ -1,7 +1,7 @@
 CC=g++
 CFLAGS=-c
 LDFLAGS=
-SOURCES=keyboard/pch.cpp keyboard/FileOpen.cpp keyboard/LITC.cpp keyboard/pch.cpp keyboard/keyboard.cpp
+SOURCES=keyboard/pch.cpp keyboard/LITC.cpp keyboard/FileOpen.cpp keyboard/pch.cpp keyboard/keyboard.cpp
 OBJECTS=$(SOURCES:.cpp=.o)
 EXECUTABLE=Geometry
 
