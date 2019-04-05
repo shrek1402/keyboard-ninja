@@ -1,8 +1,7 @@
-    
 language: cpp
 compiler: gcc
 dist: trusty
-cache: cargo
+#cache: cargo
 
 before_install:
   # C++17
