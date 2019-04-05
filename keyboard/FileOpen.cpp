@@ -1,4 +1,3 @@
-#include "FileOpen.h"
 #include "pch.h"
 
 FileOpen::FileOpen()
@@ -29,7 +28,7 @@ void FileOpen::SetPositionX()
     for (size_t i = 0; i < _vPuncts.size(); i++) {
         COORD cTemp;
         cTemp.X = _objLITC.GetPosition(lenght, 0);
-        cTemp.Y = sqrt(-1);
+        cTemp.Y = 0; //nan
         _vPositions.push_back(cTemp);
     }
 }
