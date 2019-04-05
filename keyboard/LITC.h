@@ -9,8 +9,7 @@
 #include <string>
 #include <vector>
 #include "Structusr.h"
-#include "FileOpen.h"
-#include "LITC.h"
+
  //TODO
 //#include "Hello.h"
 class LITC {
