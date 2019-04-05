@@ -11,8 +11,11 @@ int main()
     mainMenu.PrintMenu();
     mainMenu.~FileOpen();
     int userSelection = 0; // = _getch();
-
-    while (userSelection) {
-        FileOpen menu;
-    }
+        //psdpjSPJDJPDSJ]]DS\WDPL\ds /ds]DSlLDPS\L
+        //s
+        //]d[l]
+        //sld]ls]dl]slds
+    //while (userSelection) {
+      //  FileOpen menu;
+  //  }
 }
