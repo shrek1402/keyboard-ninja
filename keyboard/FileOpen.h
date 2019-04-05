@@ -8,10 +8,10 @@
 #include <iostream>
 #include <string>
 #include <vector>
-
+#include "Structusr.h"
 #include "FileOpen.h"
 #include "LITC.h"
-#include "Structusr.h" //TODO
+ //TODO
 //#include "Hello.h"
 class FileOpen {
 private:
