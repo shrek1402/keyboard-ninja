@@ -17,4 +17,6 @@ install:
 script: 
   - g++ keyboard/pch.cpp keyboard/FileOpen.cpp keyboard/LITC.cpp keyboard/pch.cpp keyboard/keyboard.cpp -std=c++17 -o travis_gcc_cpp17
   -ls
+  -cd keyboard
+  -ls
   - ./travis_gcc_cpp17
