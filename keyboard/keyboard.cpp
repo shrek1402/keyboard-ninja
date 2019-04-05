@@ -4,6 +4,7 @@ using namespace std;
 
 int main()
 {
+    std::cout << "OK!";
     FileOpen mainMenu;
     mainMenu.Open("MainMenu.txt");
     mainMenu.SetPositionX();
