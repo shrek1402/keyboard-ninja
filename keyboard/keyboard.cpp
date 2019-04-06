@@ -1,9 +1,39 @@
 ﻿#include "pch.h"
 
-using namespace std;
+#ifndef __linux
+#include <conio.h>
+#else
+#include <unistd.h>
+#include <termios.h>
+#include <unistd.h>
+#include <termios.h>
+int getch()
+{
 
+    int ch;
+
+    struct termios oldt, newt;
+
+    tcgetattr(STDIN_FILENO, &oldt);
+
+    newt = oldt;
+
+    newt.c_lflag &= ~(ICANON | ECHO);
+
+    tcsetattr(STDIN_FILENO, TCSANOW, &newt);
+
+    ch = getchar();
+
+    tcsetattr(STDIN_FILENO, TCSANOW, &oldt);
+
+    return ch;
+}
+#endif
+using namespace std;
 int main()
 {
+    
+
     std::cout << "OK!";
     FileOpen mainMenu;
     mainMenu.Open("MainMenu.txt");
@@ -11,7 +41,7 @@ int main()
     mainMenu.SetPositionY(0);
     mainMenu.PrintMenu();
     mainMenu.~FileOpen();
-    int userSelection = 0; // = _getch();
+    int userSelection = getch();
         //psdpjSPJDJPDSJ]]DS\WDPL\ds /ds]DSlLDPS\L
         //s
         //]d[l]
