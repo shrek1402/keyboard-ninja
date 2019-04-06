@@ -1,6 +1,6 @@
 language: cpp
 cache: cargo
-compiler: gcc
+#compiler: gcc
 dist: trusty
 sudo:     required
 
