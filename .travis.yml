@@ -2,7 +2,7 @@ language: cpp
 cache: cargo
 compiler: gcc
 dist: trusty
-
+sudo:     required
 before_install:
   # C++17
   - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
