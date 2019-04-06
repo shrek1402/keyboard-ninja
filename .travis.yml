@@ -3,6 +3,36 @@ cache: cargo
 compiler: gcc
 dist: trusty
 sudo:     required
+
+os:
+    # áóäåì ïðîãîíÿòü CI è íà Linux, è íà Mac OS X...
+    - linux
+    - osx
+
+compiler:
+    # ... è ñ ïîìîùüþ GCC, è Clang
+    - gcc
+    - Clang
+
+env:
+    # ñïèñîê ïåðåìåííûõ îêðóæåíèÿ, âëèÿþùèõ íà ìàòðèöó ñáîðêè:
+    - TARGET_CPU=amd64 BUILD_CONFIGURATION=Debug
+    - TARGET_CPU=amd64 BUILD_CONFIGURATION=Release
+    - TARGET_CPU=x86 BUILD_CONFIGURATION=Debug
+    - TARGET_CPU=x86 BUILD_CONFIGURATION=Release
+
+matrix:
+    include:
+        - os: linux
+          addons:
+            apt:
+              sources:
+                - ubuntu-toolchain-r-test
+              packages:
+                - g++-7
+      env:
+        - MATRIX_EVAL="CC=gcc-7 && CXX=g++-7"
+
 before_install:
   # C++17
   - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
