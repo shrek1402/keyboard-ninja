@@ -1,19 +1,26 @@
 ﻿#ifndef PCH_H
 #define PCH_H
 
+//Lib
 #include <algorithm>
 #include <cstdio>
 #include <ctime>
 #include <fstream>
 #include <iomanip>
-
-#include <string>
 #include <iostream>
+#include <string>
 #include <vector>
 
-#include "Structusr.h" //TODO
-#include "LITC.h"
+//Cross
+#ifndef __linux
+#include "_win.h"
+#else
+#include "_linux.h"
+#endif
+
+//MyLib
 #include "FileOpen.h"
-//#include "Hello.h"
+#include "LITC.h"
+#include "Structusr.h"
 
 #endif

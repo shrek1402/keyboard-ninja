@@ -155,6 +155,8 @@
     <ClInclude Include="Structusr.h" />
     <ClInclude Include="LITC.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="_linux.h" />
+    <ClInclude Include="_win.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FileOpen.cpp" />
